@@ -1,0 +1,89 @@
+    .swiper-container {
+      width: 100%;
+      height: 100%;
+    }
+    .swiper-slide {
+      text-align: center;
+      font-size: 18px;
+      background: #fff;
+      /* Center slide text vertically */
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: -webkit-flex;
+      display: flex;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      -webkit-justify-content: center;
+      justify-content: center;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      -webkit-align-items: center;
+      align-items: center;
+    }
+/*------------- core css end ----------------------*/
+
+.swiper-container {
+  height: auto;
+}
+
+.biziq-review {
+  padding: 70px 0;
+  color: #555;
+}
+
+.biziq-review > div {
+  max-width: 500px;
+  margin: auto;
+}
+
+.review-rating svg {
+  width: 14px;
+  color: gold;
+}
+
+div[id*="biziqrecentreviews-"] {
+  visibility: hidden;
+  transition: .2s ease-in-out;
+}
+
+div[id*="biziqrecentreviews-"] .biziq-review > div {
+  margin-bottom: 20px;
+}
+
+div[id*="biziqrecentreviews-"] .review-info span {
+  display: block;
+}
+
+div[id*="biziqrecentreviews-"] .review-info .author-name {
+  font-size: 1.4em;
+  line-height: 1.6em;
+  font-weight: 600;
+}
+
+div[id*="biziqrecentreviews-"] .review-date {
+  opacity: .4;
+  font-size: .8em;
+}
+
+div[id*="biziqrecentreviews-"] .review-rating {
+  margin-bottom: 1em;
+}
+
+.swiper-slide {
+  background: whitesmoke;
+  color: #0F309E;
+}
+
+#h1 {
+    padding: 15px;
+    text-align: center;
+    font-size: 2em;
+    color: white;
+    line-height: 1.4em;
+    display: table;
+    background: #007aff;
+    margin: 30px auto -20px;
+    z-index: 2;
+    position: relative;
+    box-shadow: 0 10px 15px rgba(0,0,0,0.1);
+}

@@ -4,22 +4,16 @@ body {
     overflow-x: hidden;
     overflow-y: auto;
     backface-visibility: hidden;
+    font-family: 'Copse', serif;
 }
 @import url('https://fonts.googleapis.com/css?family=Copse');
-h1,h2,h3,h4,h5,h6 {
-  font-family: 'Copse', serif;
-  font-size:60px;
-}
-p{
-  font-family: 'Copse', serif;
-  font-size:18px;
-}
+
 
 #overlay {
     background-color: #000;
     position: fixed;
     width: 100%;
-    height: 100%;
+    
     opacity: 0.08;
 }
 
@@ -366,4 +360,63 @@ nav{
 .navfont:hover:before,.navfont:hover:after{
   width:100%;
   transition:800ms ease all;
+}
+
+
+#section3{
+    margin-top:100px;
+}
+#innerdiv1{
+
+    padding-top:100px;
+
+}
+.text-center h4{
+    color:#0FD23A;
+}
+
+#innerdiv2{
+    padding-top:50px;
+    
+}
+#innerdiv2 p{
+    color:#119EB8;
+    padding-top: 200px;
+}
+
+.text-center h1{
+    color:#32AFC6;
+}
+#section4{
+    padding-top:100px;
+}
+
+.counter{
+    margin:50px;
+
+}
+
+.email{
+    margin: 50px 0px 50px 0px;
+    padding: 10px 0px 10px 0px;
+    background-color: #86EF9D;
+}
+
+#innerdiv4{
+   padding-top:50px; 
+}
+.email > .row {
+    position:relative;
+    top:20%;
+}
+.text-center p{
+    font-weight:bold;
+    font-size:1.25em;
+    margin-top:7px;
+}
+@media only screen and (max-width: 449px) {
+  #innerdiv2 p{
+    color:#119EB8;
+    padding-top: 50px;
+}
 }
