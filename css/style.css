@@ -1,0 +1,369 @@
+body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    overflow-y: auto;
+    backface-visibility: hidden;
+}
+@import url('https://fonts.googleapis.com/css?family=Copse');
+h1,h2,h3,h4,h5,h6 {
+  font-family: 'Copse', serif;
+  font-size:60px;
+}
+p{
+  font-family: 'Copse', serif;
+  font-size:18px;
+}
+
+#overlay {
+    background-color: #000;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    opacity: 0.08;
+}
+
+#scene {
+    padding: 0;
+    margin: 0;
+    width: 115%;
+    height: 120vh;
+    overflow: hidden;
+    top: -5%;
+    left: -5%;
+    transform: translate(-50%,-50%);
+    -webkit-transform: translate(-50%,-50%);
+}
+
+main {
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;    
+}
+
+.wrapper {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+
+    transform: translate(-50%,-50%);
+    -webkit-transform: translate(-50%,-50%);
+    text-align: center;
+}
+
+.wrapper h1 {
+  color:white;
+        font-size:3em;
+        font-weight: bold;
+}
+
+.layer {
+    width: 110%;
+    height: 120vh;
+    overflow: hidden;
+}
+
+.layer2 {
+    
+    background-size: cover;
+    background-position: center;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: -5%;
+    top: -5%;
+}
+
+.layer1 {
+    background-image: url(../images/bg.jpg);
+    background-position: center;
+    background-size: cover;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: -5%;
+    top: -5%;
+}
+
+@media (max-width:1200px) and (min-width:700px) {
+     .wrapper img {
+        width: 220px;
+        height: auto;
+    } 
+}
+
+@media (max-width:700px) {
+    .layer2 {
+        background-size: cover;
+        background-position: center;
+        width: 167%;
+        height: 77vh;
+        left: -69%;
+        top: 27%;
+    }
+    
+    .layer1 {
+        background-position: center;
+        background-size: cover;
+        width: 100%;
+        height: 115%;
+        left: -5%;
+        top: -1%;
+    }    
+    
+    .wrapper h1 {
+        color:white;
+        font-size:3em;
+        font-weight: bold;
+    }
+}
+
+.nav-link{
+  border:none;
+  position:relative;
+  height:auto;
+  font-size: 17px;
+  padding:0 2em;
+  cursor:pointer;
+  transition:800ms ease all;
+  outline:none;
+  margin:10px;
+  font-weight: bold;
+}
+.nav-link:before{
+  content:'';
+  position:absolute;
+  top:0;
+  right:0;
+  height:2px;
+  width:0;
+  border-bottom:1px solid blue;
+  background: linear-gradient(to right, #0000ff 40%, #66ff33 50%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation-delay: 1s;
+  transition:400ms ease all;
+}
+.nav-link:after{
+  content:'';
+  position:absolute;
+  top:50%;
+  right:0;
+  height:2px;
+  width:0;
+  border-bottom:1px solid green;
+  background: linear-gradient(to right, #0000ff 40%, #66ff33 50%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation-delay: 1s;
+  transition:400ms ease all;
+}
+.nav-link:after{
+  right:inherit;
+  top:inherit;
+  left:0;
+  bottom:0;
+}
+
+.nav-link:hover:before,.nav-link:hover:after{
+  width:100%;
+  transition:800ms ease all;
+}
+.dropdown-menu .nav-link{
+  color:black !important;
+}
+.dropdown-meu .nav-link:hover{
+  border-bottom:1px solid black !important;
+}
+nav{
+  background:black;
+  max-height: 70px;
+}
+.transparent{
+  background:transparent;
+  position: fixed;
+  top:0;
+  z-index:2;
+  width:100%;
+}
+.bg-new{
+
+  background-color: black;
+
+}
+
+.sidebar {
+  background: #1a1c1d;
+  color: #787d80;
+  width: 250px;
+  height: 100%;
+  text-align: center;
+  transform-origin: left;
+  transform-style: preserve-3d;
+  transition: all 0.5s;
+  overflow: hidden;
+}
+.sidebar.hideDown {
+  transform: rotateY(90deg) skewY(10deg);
+}
+.sidebar.hideUp {
+  transform: rotateY(90deg) skewY(-10deg);
+}
+.sidebar .sidebarHeader {
+  padding: 20px 10px;
+  font-weight: 700;
+}
+.sidebar ul {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+}
+.sidebar ul li {
+  padding: 15px 10px;
+}
+.sidebar ul li a {
+  text-decoration: none;
+  color: inherit;
+  transition: color 0.5s;
+}
+.sidebar ul li a:hover {
+  color: #ccc;
+}
+.button-row {
+  display: -webkit-inline-box;
+  display: -moz-inline-box;
+  display: inline-box;
+  display: -webkit-inline-flex;
+  display: -moz-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+}
+.button-row > div {
+  position: relative;
+  width: 160px;
+  height: 50px;
+  margin: 0 15px;
+  -webkit-perspective: 1000px;
+  -moz-perspective: 1000px;
+  perspective: 1000px;
+}
+.button-row > div > a {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  -webkit-transform-style: preserve-3d;
+  -moz-transform-style: preserve-3d;
+  -ms-transform-style: preserve-3d;
+  -o-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  -webkit-transform: translateZ(-25px);
+  -moz-transform: translateZ(-25px);
+  -ms-transform: translateZ(-25px);
+  -o-transform: translateZ(-25px);
+  transform: translateZ(-25px);
+  -webkit-transition: -webkit-transform 0.25s;
+  -moz-transition: -moz-transform 0.25s;
+  transition: transform 0.25s;
+}
+.button-row > div > a::before, .button-row > div > a::after {
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  width: 160px;
+  height: 50px;
+  position: absolute;
+  border: 5px solid black;
+  box-sizing: border-box;
+  content: attr(title);
+  display: -webkit-box;
+  display: -moz-box;
+  display: box;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+.button-row > div > a::before {
+  background-color: #000;
+  color: #fff;
+  -webkit-transform: rotateY(0deg) translateZ(25px);
+  -moz-transform: rotateY(0deg) translateZ(25px);
+  -ms-transform: rotateY(0deg) translateZ(25px);
+  -o-transform: rotateY(0deg) translateZ(25px);
+  transform: rotateY(0deg) translateZ(25px);
+}
+.button-row > div > a::after {
+  background-color: #fff;
+  border-color: #000;
+  color: #000;
+  -webkit-transform: rotateX(90deg) translateZ(25px);
+  -moz-transform: rotateX(90deg) translateZ(25px);
+  -ms-transform: rotateX(90deg) translateZ(25px);
+  -o-transform: rotateX(90deg) translateZ(25px);
+  transform: rotateX(90deg) translateZ(25px);
+}
+.button-row > div > a:hover {
+  -webkit-transform: translateZ(-25px) rotateX(-90deg);
+  -moz-transform: translateZ(-25px) rotateX(-90deg);
+  -ms-transform: translateZ(-25px) rotateX(-90deg);
+  -o-transform: translateZ(-25px) rotateX(-90deg);
+  transform: translateZ(-25px) rotateX(-90deg);
+}
+
+.navfont{
+
+  border:none;
+  position:relative;
+
+  height:43px;
+  font-size:1.6em;
+  padding:0 2em;
+  cursor:pointer;
+  transition:800ms ease all;
+  outline:none;
+}
+
+
+.navfont:hover{
+
+}
+.navfont:before{
+  content:'';
+  position:absolute;
+  top:0;
+  right:0;
+  height:2px;
+  width:0;
+  border-bottom:1px solid blue;
+  background: linear-gradient(to right, #0000ff 40%, #66ff33 50%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation-delay: 1s;
+  transition:400ms ease all;
+}
+.navfont:after{
+  content:'';
+  position:absolute;
+  top:0;
+  right:0;
+  height:2px;
+  width:0;
+  border-bottom:1px solid green;
+  background: linear-gradient(to right, #0000ff 40%, #66ff33 50%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation-delay: 1s;
+  transition:400ms ease all;
+}
+.navfont:after{
+  right:inherit;
+  top:inherit;
+  left:0;
+  bottom:0;
+}
+.navfont:hover:before,.navfont:hover:after{
+  width:100%;
+  transition:800ms ease all;
+}
