@@ -44,6 +44,10 @@ main {
     -webkit-transform: translate(-50%,-50%);
     text-align: center;
 }
+.wrapper img {
+  width: 80px;
+  height: auto;
+}
 
 .wrapper h1 {
   color:white;
@@ -81,7 +85,7 @@ main {
 
 @media (max-width:1200px) and (min-width:700px) {
      .wrapper img {
-        width: 220px;
+        width: 80px;
         height: auto;
     } 
 }
@@ -109,6 +113,10 @@ main {
         color:white;
         font-size:3em;
         font-weight: bold;
+    }
+    .wrapper img {
+        width: 80px;
+        height: auto;
     }
 }
 
@@ -171,7 +179,7 @@ main {
 }
 nav{
   background:black;
-  max-height: 70px;
+  max-height: 100px;
 }
 .transparent{
   background:transparent;
@@ -310,17 +318,27 @@ nav{
 
   border:none;
   position:relative;
-
+  background: linear-gradient(to right, #33db58 0%, #4363cf 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
   height:43px;
+  font-weight:bold;
   font-size:1.6em;
-  padding:0 2em;
   cursor:pointer;
   transition:800ms ease all;
   outline:none;
+  -webkit-transition-property: width; /* Safari */
+  -webkit-transition-duration: 1s; /* Safari */
+  transition-property: width;
+  transition-duration: 1s;
 }
 
 
+
 .navfont:hover{
+    background: linear-gradient(to right, #4363cf 0%, #33db58 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 
 }
 .navfont:before{
@@ -419,4 +437,38 @@ nav{
     color:#119EB8;
     padding-top: 50px;
 }
+}
+.custom-toggler .navbar-toggler-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(67,99,207, 0.7)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+}
+.custom-toggler.navbar-toggler {
+    border-color: rgb(67,99,207);
+}
+#products{
+    margin-top:100px;
+}
+#probtn {
+    position: absolute;
+    left:50%;
+    margin-top:2%;
+  cursor:pointer;
+  padding:10px;
+  color:#8FA4E9;
+}
+#parent{
+    position: relative;
+    right:-71%;
+}
+#probtn : hover{
+    margin-top:2%;
+  cursor:pointer;
+  
+  padding:10px;
+  color:#86EF90;
+  border-top: 1px solid #8FA4E9;
+  border-bottom: 1px solid #8FA4E9;
+  -webkit-transition-property: width; /* Safari */
+  -webkit-transition-duration: 1s; /* Safari */
+  transition-property: width;
+  transition-duration: 1s;
 }
